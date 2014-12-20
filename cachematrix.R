@@ -10,13 +10,13 @@
 makeCacheMatrix <- function(x = matrix()) {
  
   # check if a given matrix is square
-  dm <- dim(x)
-  if (length(dm) != 2) {
+  dimension <- dim(x)
+  if (length(dimension) != 2) {
     print("Error - the given matrix must be 2 dimensional.")
     return(NA)
   }
   
-  if (dm[1] != dm[2]) {
+  if (dimension[1] != dimension[2]) {
     print("Error - the given matrix must be a square matrix.")
     return(NA)
   }
