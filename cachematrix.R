@@ -9,7 +9,19 @@
 
 makeCacheMatrix <- function(x = matrix()) {
  
-  # set the value of given matrix
+  # check if a given matrix is square
+  dm <- dim(x)
+  if (length(dm) != 2) {
+    print("Error - the given matrix must be 2 dimensional.")
+    return(NA)
+  }
+  
+  if (dm[1] != dm[2]) {
+    print("Error - the given matrix must be a square matrix.")
+    return(NA)
+  }
+  
+  # set the value of the given matrix
   inv <- NULL
   set <- function(y) {
     x <<- y
